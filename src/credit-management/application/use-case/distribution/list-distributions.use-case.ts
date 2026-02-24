@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class ListDistributionsUseCase {
+class ListDistributionsUseCase {
   byPeriod(): string {
     return 'Hello World!';
   }
 }
+
+export default ListDistributionsUseCase;

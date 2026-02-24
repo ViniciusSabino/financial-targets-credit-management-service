@@ -1,11 +1,11 @@
 import { Controller, Get, Post } from '@nestjs/common';
 
-import { GetInstallmentUseCase } from '@application/use-case/installments/get-installment.use-case';
-import { ListInstallmentsUseCase } from '@application/use-case/installments/list-installments.use-case';
-import { RegisterInstallmentPurchaseUseCase } from '@application/use-case/installments/register-installment-purchase.use-case';
+import GetInstallmentUseCase from '@application/use-case/installments/get-installment.use-case';
+import ListInstallmentsUseCase from '@application/use-case/installments/list-installments.use-case';
+import RegisterInstallmentPurchaseUseCase from '@application/use-case/installments/register-installment-purchase.use-case';
 
 @Controller('installments')
-export class InstallmentsController {
+class InstallmentsController {
   constructor(
     private readonly getInstallmentUseCase: GetInstallmentUseCase,
     private readonly listInstallmentsUseCase: ListInstallmentsUseCase,
@@ -27,3 +27,5 @@ export class InstallmentsController {
     return this.registerInstallmentPurchaseUseCase.register();
   }
 }
+
+export default InstallmentsController;

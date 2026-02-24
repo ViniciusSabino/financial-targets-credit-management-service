@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class RegisterFreeSpendUseCase {
+class RegisterFreeSpendUseCase {
   register(): string {
     return 'Hello World!';
   }
 }
+
+export default RegisterFreeSpendUseCase;

@@ -1,9 +1,9 @@
 import { Controller, Post } from '@nestjs/common';
 
-import { RegisterFreeSpendUseCase } from '@application/use-case/free-spending/register-free-spend.use-case';
+import RegisterFreeSpendUseCase from '@application/use-case/free-spending/register-free-spend.use-case';
 
 @Controller('free-spending')
-export class FreeSpendingController {
+class FreeSpendingController {
   constructor(private readonly registerFreeSpendUseCase: RegisterFreeSpendUseCase) {}
 
   @Post()
@@ -11,3 +11,5 @@ export class FreeSpendingController {
     return this.registerFreeSpendUseCase.register();
   }
 }
+
+export default FreeSpendingController;

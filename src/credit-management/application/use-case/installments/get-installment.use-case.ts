@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class GetInstallmentUseCase {
+class GetInstallmentUseCase {
   byCreditCardIdAndPeriod(): string {
     return 'Hello World!';
   }
 }
+
+export default GetInstallmentUseCase;
