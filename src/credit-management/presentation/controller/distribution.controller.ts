@@ -1,13 +1,22 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { DistributionService } from '@domain/services/distribution/distribution.service';
+import { GetDistributionUseCase } from '@application/use-case/distribution/get-distribution.use-case';
+import { ListDistributionsUseCase } from '@application/use-case/distribution/list-distributions.use-case';
 
-@Controller()
+@Controller('distribution')
 export class DistributionController {
-  constructor(private readonly distributionService: DistributionService) {}
+  constructor(
+    private readonly getDistributionUseCase: GetDistributionUseCase,
+    private readonly listDistributionsUseCase: ListDistributionsUseCase,
+  ) {}
 
   @Get()
-  getHello(): string {
-    return this.distributionService.getHello();
+  getDistribution(): string {
+    return this.getDistributionUseCase.byCreditCardIdAndPeriod();
+  }
+
+  @Get()
+  listDistributions(): string {
+    return this.listDistributionsUseCase.byPeriod();
   }
 }

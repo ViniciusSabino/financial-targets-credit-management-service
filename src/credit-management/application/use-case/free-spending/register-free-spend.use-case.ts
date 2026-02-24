@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class SubscriptionsService {
-  getHello(): string {
+export class RegisterFreeSpendUseCase {
+  register(): string {
     return 'Hello World!';
   }
 }

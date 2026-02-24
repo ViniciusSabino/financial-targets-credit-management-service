@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
 
-import { DistributionController } from '@presentation/controller';
+import { DistributionController } from '@presentation/controller/distribution.controller';
+import { GetDistributionUseCase } from '@application/use-case/distribution/get-distribution.use-case';
+import { ListDistributionsUseCase } from '@application/use-case/distribution/list-distributions.use-case';
 import { DistributionService } from '@domain/services';
 
 @Module({
   imports: [],
   controllers: [DistributionController],
-  providers: [DistributionService],
+  providers: [GetDistributionUseCase, ListDistributionsUseCase, DistributionService],
 })
 export class DistributionModule {}

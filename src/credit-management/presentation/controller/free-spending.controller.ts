@@ -1,13 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Post } from '@nestjs/common';
 
-import { FreeSpendingService } from '@domain/services/free-spending/free-spending.service';
+import { RegisterFreeSpendUseCase } from '@application/use-case/free-spending/register-free-spend.use-case';
 
-@Controller()
+@Controller('free-spending')
 export class FreeSpendingController {
-  constructor(private readonly freeSpendingService: FreeSpendingService) {}
+  constructor(private readonly registerFreeSpendUseCase: RegisterFreeSpendUseCase) {}
 
-  @Get()
-  getHello(): string {
-    return this.freeSpendingService.getHello();
+  @Post()
+  registerFreeSpending(): string {
+    return this.registerFreeSpendUseCase.register();
   }
 }
