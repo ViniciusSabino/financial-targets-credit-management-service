@@ -23,10 +23,10 @@
     "noFallthroughCasesInSwitch": false,
     "strict": true,
     "paths": {
-      "@domain/*": ["src/domain/*"],
-      "@application/*": ["src/application/*"],
-      "@infrastructure/*": ["src/infrastructure/*"],
-      "@presentation/*": ["src/presentation/*"]
+      "@domain/*": ["src/credit-management/domain/*"],
+      "@application/*": ["src/credit-management/application/*"],
+      "@infrastructure/*": ["src/credit-management/infrastructure/*"],
+      "@presentation/*": ["src/credit-management/presentation/*"]
     }
   }
 }
