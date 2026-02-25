@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 class RegisterInstallmentPurchaseUseCase {
   register(): string {
-    return 'Hello World!';
+    return 'RegisterInstallmentPurchaseUseCase';
   }
 }
 

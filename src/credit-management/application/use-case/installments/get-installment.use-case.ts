@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 class GetInstallmentUseCase {
   byCreditCardIdAndPeriod(): string {
-    return 'Hello World!';
+    return 'GetInstallmentUseCase';
   }
 }
 
