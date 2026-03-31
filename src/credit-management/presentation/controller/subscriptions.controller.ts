@@ -2,7 +2,7 @@ import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Query } from 
 
 import ListSubscriptionsUseCase from '@application/use-case/subscriptions/list-subscriptions.use-case';
 import RegisterSubscriptionUseCase from '@application/use-case/subscriptions/register-subscription.use-case';
-import SubscriptionRegisterDTO from '@application/dto/subscription-register.dto';
+import SubscriptionRegisterDTO from '@application/dto/subscriptions/subscription-register.dto';
 
 @Controller('subscriptions')
 class SubscriptionsController {
@@ -13,10 +13,7 @@ class SubscriptionsController {
 
   @HttpCode(HttpStatus.OK)
   @Get()
-  async listSubscriptions(
-    @Query('month') month: string,
-    @Query('year') year: string,
-  ): Promise<string> {
+  async listSubscriptions(@Query('month') month: string, @Query('year') year: string): Promise<string> {
     return this.listSubscriptionsUseCase.byPeriod();
   }
 

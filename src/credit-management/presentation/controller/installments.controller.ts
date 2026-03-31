@@ -3,7 +3,7 @@ import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post } from '@nestj
 import GetInstallmentUseCase from '@application/use-case/installments/get-installment.use-case';
 import ListInstallmentsUseCase from '@application/use-case/installments/list-installments.use-case';
 import RegisterInstallmentPurchaseUseCase from '@application/use-case/installments/register-installment-purchase.use-case';
-import InstallmentPurchaseRegisterDTO from '@application/dto/installment-purchase-register.dto';
+import InstallmentPurchaseRegisterDTO from '@application/dto/installments/installment-purchase-register.dto';
 
 @Controller('installments')
 class InstallmentsController {

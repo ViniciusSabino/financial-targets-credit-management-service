@@ -6,6 +6,10 @@ class SubscriptionRegisterDTO {
 
   @IsNumber()
   @IsPositive()
+  readonly accountId!: number;
+
+  @IsNumber()
+  @IsPositive()
   readonly value!: number;
 
   @IsDateString()
